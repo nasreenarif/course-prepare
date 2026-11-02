@@ -1,6 +1,10 @@
 MODULE 5 DEPLOYMENT CHECKLIST
 
 BEFORE HOSTING
+[ ] APP_ORIGIN is the public HTTPS origin with no path; verification links return there.
+[ ] GMAIL_USER and GMAIL_APP_PASSWORD are protected server settings; host SMTP delivery works.
+[ ] Registration link verifies email without signing in; password login returns pending state.
+[ ] Correct emailed OTP completes login; wrong, expired, reused, and replaced codes are rejected.
 [ ] Confirm the course-approved account, service, plan, and repository visibility.
 [ ] Review source changes; no .env, secrets, tokens, or real user records committed.
 [ ] Run server tests, client tests, and frontend build with the selected runtime.

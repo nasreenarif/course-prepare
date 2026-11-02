@@ -65,7 +65,7 @@ This runs server, client-helper, and practice tests plus a production client bui
 
 ## Built-client rehearsal
 
-Build the client, stop Vite, set `SERVE_CLIENT=true` in `server/.env`, and restart the local server. Open `http://localhost:3000`: Express now serves the built client and API together. Rebuild after source changes. Restore `SERVE_CLIENT=false` to return to two-server development. This HTTP rehearsal does not prove production HTTPS or cookie configuration.
+Build the client, stop Vite, set `SERVE_CLIENT=true` and `APP_ORIGIN=http://localhost:3000` in `server/.env`, and restart the local server. Open `http://localhost:3000`: Express now serves the built client and API together. Rebuild after source changes. Restore `SERVE_CLIENT=false` and `APP_ORIGIN=http://localhost:5173` to return to Vite development, then restart Express. Keep Gmail settings configured in either mode. This HTTP rehearsal does not prove production HTTPS or cookie configuration.
 
 ## Boundaries and next steps
 

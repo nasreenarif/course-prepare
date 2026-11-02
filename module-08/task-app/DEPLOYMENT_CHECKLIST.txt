@@ -1,4 +1,9 @@
-MODULE 7 DEPLOYMENT CHECKLIST -- record actual evidence
+MODULE 8 DEPLOYMENT CHECKLIST -- record actual evidence
+[ ] APP_ORIGIN is the public HTTPS origin with no path; verification links return there.
+[ ] GMAIL_USER and GMAIL_APP_PASSWORD are protected server settings; host SMTP delivery works.
+[ ] Registration link verifies email without signing in; password login returns pending state.
+[ ] Correct emailed OTP completes login; wrong, expired, reused, and replaced codes are rejected.
+[ ] Final revision passes the configured lint/quality checks and recorded browser workflows.
 [ ] Normal server entry point, not demo.js.
 [ ] server/, client/, shared/ and lockfiles present; clean installs/build pass.
 [ ] MongoDB, session store, indexes and backup/recovery plan verified.

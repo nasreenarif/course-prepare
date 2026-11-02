@@ -4,19 +4,19 @@ Run the checks for your current module before adapting its code and again after 
 
 ## Reference results
 
-The following results provide a baseline for the examples on Windows with Node.js **24.22.2** (2026-10-31). Use Node.js 24.x for this course and compare your output with the module README. Your test count may change as you add tests to your own project.
+The following results include the integrated email-verification and login-OTP tests and provide a baseline for the examples on Windows with Node.js **24.22.2** (2026-11-02). Use Node.js 24.x for this course and compare your output with the module README. Your test count may change as you add tests to your own project.
 
 | Module | Checks | Expected passing Node tests |
 | --- | --- | --- |
 | 2 | Helper tests and Vite build | 6 |
 | 3 | API/helper tests | 12 |
-| 4 | Server tests, practice tests, continuity exercises, and client build | 25 (13 + 1 + 11) |
-| 5 | `npm run check`: server/client/practice tests and client build | 22 |
-| 6 | `npm run check`: server/client/practice tests and both client entries built | 31 |
-| 7 | `npm run check`, plus 13 Gemini provider fixtures and five mock-evaluation cases | 53 |
-| 8 | `npm run check`, including configured lint, four intentional lint examples, quality tests, and both client entries built; 13 Gemini provider fixtures and five mock-evaluation cases | 63 |
+| 4 | Server tests, practice tests, continuity exercises, and client build | 42 (30 + 1 + 11) |
+| 5 | `npm run check`: server/client/practice tests and client build | 39 |
+| 6 | `npm run check`: server/client/practice tests and both client entries built | 48 |
+| 7 | `npm run check`, plus 13 Gemini provider fixtures and five mock-evaluation cases | 70 |
+| 8 | `npm run check`, including configured lint, four intentional lint examples, quality tests, and both client entries built; 13 Gemini provider fixtures and five mock-evaluation cases | 80 |
 
-The reference runs total **212 passing Node tests across the module folders**. Later examples repeat earlier tests to check that established behavior still works. The provider-fixture, mock-evaluation, and lint demonstrations are additional checks and are not included in that total. You do not need to treat repeated tests as separate assignment requirements.
+The reference runs total **297 passing Node tests across the module folders**. Later examples repeat earlier tests to check that established behavior still works. The provider-fixture, mock-evaluation, and lint demonstrations are additional checks and are not included in that total. You do not need to treat repeated tests as separate assignment requirements.
 
 ## Check Module 2 in your browser
 
@@ -32,7 +32,7 @@ Server tests use controlled database/provider doubles where configured. A mock d
 
 For database-backed modules, create a record, restart the server, and confirm that the record persists. For protected routes, use two separate accounts and check that one cannot access the other's data. Test the applicable error paths, session behavior, and keyboard interactions. Use each module's README and checklists for the complete flow.
 
-Email delivery, a real second factor, public hosting, and a complete accessibility/security review require their own implementation and evidence. Mark a check as **not tested** when you have not run it, and explain what is needed to complete it. A passing local build alone does not establish production readiness.
+Gmail verification links and emailed OTP login are implemented in Modules 4–8. Their real delivery, MongoDB persistence, public hosting, and full accessibility/security behavior still need evidence from your environment. Authenticator/passkey enrollment is a separate extension; email-based two-step login does not establish independent-factor or phishing-resistant MFA. Mark a check as **not tested** when you have not run it, and explain what is needed to complete it. A passing local build alone does not establish production readiness.
 
 ## Record your results
 

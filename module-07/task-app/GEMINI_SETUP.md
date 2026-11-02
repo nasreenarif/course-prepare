@@ -7,8 +7,8 @@ Use this guide to connect your Task App to the Gemini API. Begin with the mock e
 | Mode | Command or setting | What you need | What happens |
 | --- | --- | --- | --- |
 | Memory demo | `npm run demo --prefix server` | Installed server/client dependencies and a client build | Uses fixed mock suggestions. Ignores `.env`. No MongoDB or Gemini call. Data resets on restart. |
-| Normal app with mock AI | `AI_MODE=mock`, then start the server with `npm run dev` | MongoDB/Atlas and a session secret | Accounts/tasks persist; draft plans are fixed local fixtures. |
-| Normal app with live Gemini | `AI_MODE=live`, then start the server with `npm run dev` | MongoDB/Atlas, session secret, Gemini key, available model | Sends the entered goal to Gemini and validates the returned draft. |
+| Normal app with mock AI | `AI_MODE=mock`, then start the server with `npm run dev` | MongoDB/Atlas, a session secret, Gmail authentication settings | Accounts/tasks persist; draft plans are fixed local fixtures. |
+| Normal app with live Gemini | `AI_MODE=live`, then start the server with `npm run dev` | MongoDB/Atlas, session secret, Gmail authentication settings, Gemini key, available model | Sends the entered goal to Gemini and validates the returned draft. |
 | AI disabled | `AI_MODE=off` | Normal app configuration | Manual tasks still work; generation is unavailable. |
 
 The environment template defaults to mock mode. `npm run check`, `npm run lab:provider`, and `npm run evaluate:mock` use controlled fixtures and do not call Gemini. The optional `gemini:smoke` command below makes **one live request**.
@@ -75,6 +75,8 @@ This sends one fixed fictional goal to Gemini. It may consume quota or incur a c
 On success, expect a message beginning `Gemini live check passed`, followed by the selected model, prompt version, and number of accepted steps. If it fails, use the error code and the troubleshooting table below. This isolates provider access from database or sign-in problems. A successful provider check still needs the browser workflow in the next step.
 
 ## 5. Run the full app
+
+Before starting the server, complete [Gmail authentication setup](AUTH_SETUP.md). Set `APP_ORIGIN=http://localhost:5173`, `GMAIL_USER`, and `GMAIL_APP_PASSWORD` in `server/.env`. These are required by the normal app in both mock and live planning modes. The separate memory demo is the mode that uses simulated email in its terminal.
 
 The normal app also requires Gmail settings from [AUTH_SETUP.md](AUTH_SETUP.md), plus these settings in `server/.env`:
 

@@ -1,5 +1,9 @@
 MODULE 6 DEPLOYMENT REVIEW -- fill in actual results
 Use the course-approved hosting arrangement and your own practice data.
+[ ] APP_ORIGIN is the public HTTPS origin with no path; verification links return there.
+[ ] GMAIL_USER and GMAIL_APP_PASSWORD are protected server settings; host SMTP delivery works.
+[ ] Registration link verifies email without signing in; password login returns pending state.
+[ ] Correct emailed OTP completes login; wrong, expired, reused, and replaced codes are rejected.
 [ ] Locked installs, tests, and production build pass.
 [ ] Server-only secrets configured; no .env or credentials committed.
 [ ] NODE_ENV=production and SERVE_CLIENT=true.

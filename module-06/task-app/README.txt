@@ -62,12 +62,15 @@ prove live database or provider integration.
 
 BUILT-CLIENT REHEARSAL
 Stop Vite. Run npm run build from client. Set SERVE_CLIENT=true and
-NODE_ENV=development in server/.env; restart Express. Open http://localhost:3000.
+NODE_ENV=development and APP_ORIGIN=http://localhost:3000 in server/.env; restart Express. Open http://localhost:3000.
 The document now receives Express CSP/framing headers. Rebuild after client
-changes. Restore SERVE_CLIENT=false for normal two-server development.
+changes. Restore SERVE_CLIENT=false and APP_ORIGIN=http://localhost:5173 for normal two-server development.
 Local HTTP rehearsal does not verify HTTPS, HSTS, or production cookies.
 
 HOSTED BUILD AND START (service root contains server/ and client/)
+Set APP_ORIGIN to the public HTTPS origin. Set GMAIL_USER and GMAIL_APP_PASSWORD
+as protected server variables; verify SMTP delivery from this host. See AUTH_SETUP.md.
+
 Build: npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm run build --prefix client
 Start: npm start --prefix server
 Set NODE_ENV=production, SERVE_CLIENT=true, MONGODB_URI, SESSION_SECRET, and all

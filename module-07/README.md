@@ -82,6 +82,8 @@ Open `http://localhost:3000`. Sign in with the **public fictional demo account**
 - Email: `learner@example.test`
 - Password: `Local study passphrase 7!`
 
+In the disposable memory demo only, enter the simulated OTP printed in the server terminal after submitting the demo password. No email is sent in this mode.
+
 These are published demo values, not real credentials. The demo binds to loopback, ignores `.env`, forces mock AI, and rejects production mode. All accounts, tasks, and sessions disappear when it stops. Stop any normal API first to free port 3000.
 
 Enter a fictional goal in the planning assistant. Generate a draft: expect the mock label and three fixed steps. No task is automatically saved. Choose Use draft 1, edit the copied title, then Add task to save it. “Stop waiting” cancels the browser wait; it does not guarantee that provider work stopped.
@@ -101,5 +103,3 @@ Tests use controlled doubles/fixtures; complete the live database and two-accoun
 Read [task-app/README.txt](task-app/README.txt) for additional setup guidance, manual checks, limitations, and deployment/practice exercises. Use the numbered lessons in Canvas for the corresponding explanations, assignment requirements, and grading criteria.
 
 Continue with [Module 8](../module-08/README.md) after tracing and testing this checkpoint. Adapt changes into your own project rather than replacing its directory wholesale.
-
-In the disposable memory demo only, enter the simulated OTP printed in the server terminal after submitting the public practice credentials. The normal MongoDB app sends real messages through the Gmail configuration above.

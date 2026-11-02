@@ -99,11 +99,14 @@ live provider availability, public hosting or a full screen-reader experience.
 
 BUILT-CLIENT REHEARSAL (normal server)
 Build from client with npm run build. Stop Vite. Set SERVE_CLIENT=true and
-NODE_ENV=development in server/.env; restart the server. Open localhost:3000.
-Rebuild after source changes. Restore SERVE_CLIENT=false for Vite development.
+NODE_ENV=development and APP_ORIGIN=http://localhost:3000 in server/.env; restart the server. Open localhost:3000.
+Rebuild after source changes. Restore SERVE_CLIENT=false and APP_ORIGIN=http://localhost:5173 for Vite development.
 The demo serves the built client automatically when dist exists.
 
 HOSTING (service root contains server/, client/, shared/)
+Set APP_ORIGIN to the public HTTPS origin. Set GMAIL_USER and GMAIL_APP_PASSWORD
+as protected server variables; verify SMTP delivery from this host. See AUTH_SETUP.md.
+
 Build: npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm run build --prefix client
 Start: npm start --prefix server
 Set NODE_ENV=production, SERVE_CLIENT=true, MONGODB_URI, SESSION_SECRET, CAPTCHA

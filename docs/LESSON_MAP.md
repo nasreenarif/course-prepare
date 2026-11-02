@@ -87,17 +87,17 @@ Protect sessions and owner-scoped data; complete required identity integration.
 | --- | --- |
 | 4.1 - Authentication, Authorization, and Trust Boundaries | [task-app/practice/permission-demo.mjs](../module-04/task-app/practice/permission-demo.mjs); [task-app/server/app.js](../module-04/task-app/server/app.js) |
 | 4.2 - Cookies, Sessions, and the Login Lifecycle | [task-app/server/app.js](../module-04/task-app/server/app.js) |
-| 4.3 - Preparing the Full Stack Practice Project | [continuity-labs/contract-bridge.mjs](../module-04/continuity-labs/contract-bridge.mjs) |
+| 4.3 - Preparing the Full Stack Practice Project | [continuity-labs/contract-bridge.mjs](../module-04/continuity-labs/contract-bridge.mjs); [task-app/AUTH_SETUP.md](../module-04/task-app/AUTH_SETUP.md) |
 | 4.4 - User Models and Password Hashing | [task-app/server/models.js](../module-04/task-app/server/models.js); [task-app/server/passwords.js](../module-04/task-app/server/passwords.js) |
 | 4.5 - Registering an Account and Validating Input | [task-app/server/auth.js](../module-04/task-app/server/auth.js); [task-app/server/identity.js](../module-04/task-app/server/identity.js) |
 | 4.6 - Logging In and Restoring a Session | [task-app/server/auth.js](../module-04/task-app/server/auth.js); [task-app/server/identity.js](../module-04/task-app/server/identity.js) |
 | 4.7 - Authorizing Task Operations and Preventing Ownership Changes | [task-app/server/app.js](../module-04/task-app/server/app.js) |
-| 4.8 - CSRF Protection, Logout, and Session Expiration | [task-app/server/app.js](../module-04/task-app/server/app.js) |
+| 4.8 - CSRF Protection, Logout, and Session Expiration | [task-app/server/app.js](../module-04/task-app/server/app.js); [task-app/server/auth.js](../module-04/task-app/server/auth.js) |
 | 4.9 - Origins, Development Proxies, and CORS | [task-app/client/vite.config.js](../module-04/task-app/client/vite.config.js) |
 | 4.10 - Building a Reusable Fetch Client | [task-app/client/src/api.js](../module-04/task-app/client/src/api.js) |
 | 4.11 - Connecting React Account Forms and Session State | [task-app/client/src/AuthPanel.jsx](../module-04/task-app/client/src/AuthPanel.jsx); [task-app/client/src/main.jsx](../module-04/task-app/client/src/main.jsx) |
 | 4.12 - Loading and Mutating Private Data in React | [task-app/client/src/main.jsx](../module-04/task-app/client/src/main.jsx); [task-app/practice/array-updates.mjs](../module-04/task-app/practice/array-updates.mjs) |
-| 4.13 - Testing the Integrated Application with Two Accounts | [README.md](../module-04/README.md) |
+| 4.13 - Testing the Integrated Application with Two Accounts | [README.md](../module-04/README.md); [verification guide](VERIFICATION.md); [task-app/server/auth.test.js](../module-04/task-app/server/auth.test.js) |
 | 4.14 - Troubleshooting and Adapting the Pattern to Your Project | [task-app/practice/priority.mjs](../module-04/task-app/practice/priority.mjs) |
 | 4.15 - Email Verification and Account State | [task-app/AUTH_SETUP.md](../module-04/task-app/AUTH_SETUP.md); [task-app/server/email.js](../module-04/task-app/server/email.js); [task-app/server/identity.js](../module-04/task-app/server/identity.js); [task-app/server/auth.test.js](../module-04/task-app/server/auth.test.js) |
 | 4.16 - Two-Factor Authentication and Pending Sessions | [task-app/server/auth.js](../module-04/task-app/server/auth.js); [task-app/server/identity.js](../module-04/task-app/server/identity.js); [task-app/client/src/AuthPanel.jsx](../module-04/task-app/client/src/AuthPanel.jsx); [task-app/server/auth.test.js](../module-04/task-app/server/auth.test.js) |

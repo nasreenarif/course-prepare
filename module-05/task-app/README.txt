@@ -49,14 +49,17 @@ Client helper tests replace fetch. Neither proves live database integration.
 
 LOCAL BUILT-CLIENT REHEARSAL
 1. Stop Vite with Ctrl+C and run npm run build from client.
-2. In server/.env set SERVE_CLIENT=true and NODE_ENV=development.
+2. In server/.env set SERVE_CLIENT=true, NODE_ENV=development, and APP_ORIGIN=http://localhost:3000.
 3. Restart with npm run dev from server.
 4. Open http://localhost:3000 and repeat account and task checks.
 5. Rebuild client after source edits; Express serves the dist snapshot.
-Restore SERVE_CLIENT=false for the two-server development workflow.
+Restore SERVE_CLIENT=false and APP_ORIGIN=http://localhost:5173 for the two-server development workflow.
 This local HTTP rehearsal is not a production HTTPS verification.
 
 HOSTING CONFIGURATION
+Set APP_ORIGIN to the public HTTPS origin. Set GMAIL_USER and GMAIL_APP_PASSWORD
+as protected server variables; verify SMTP delivery from this host. See AUTH_SETUP.md.
+
 Repository/service root must contain server and client.
 Build:
   npm ci --prefix server --omit=dev && npm ci --prefix client --include=dev && npm run build --prefix client

@@ -1,17 +1,29 @@
 MODULE 8 CHANGE MAP
-Module 6 is preserved unchanged. This folder contains a separate continuation.
-Added: protected draft-plan endpoint, pure shared contract, mock/live provider
-adapter, visible mode state, cancellation/stale-result handling, explicit copy to
-manual form, disposable local memory demo, bounded-history exercise, evaluation
-cases, and AI-use/evaluation templates.
-Retained: authentication, sessions, CSRF, owner-scoped CRUD, validation, loading,
-accessible dialog, responsive styles, security headers, CAPTCHA and prior labs.
-No new dependencies were required. shared/ must be included when deploying.
-Default database: cs418_module8. Cookie: cs418.m8.sid. No data migration.
+Module 7 is the previous reference checkpoint. Module 8 retains its protected
+Gemini planner and adds final verification, debugging, and release practice.
 
-GEMINI PLANNING CONNECTION
-Use GEMINI_API_KEY and GEMINI_MODEL in server/.env for AI_MODE=live.
-server/ai.js sends Gemini generateContent requests and validates candidates.
-GEMINI_SETUP.md explains setup, an optional live smoke check, and error handling.
-The memory demo and automated provider exercises remain local fixtures.
-No additional runtime dependency is required; the adapter uses Node fetch.
+ADDED IN MODULE 8
+quality/ contains debugging, task-filter, release-gate, and async regression labs.
+server/quality-flow.test.js checks acceptance and failure paths through the API.
+eslint.config.mjs and the root package add the scoped ESLint checks and deliberate
+lint examples. Run npm ci --include=dev at task-app as well as the server/client
+installs: Module 8 has a root development dependency that Module 7 does not need.
+scripts/check.mjs combines these checks with the inherited tests and client build.
+
+RETAINED FROM EARLIER MODULES
+Registration verification links, emailed login OTP, sessions, CSRF, owner-scoped
+CRUD, request/response validation, loading/error states, accessible dialog,
+responsive styles, security headers, CAPTCHA, and the earlier practice labs.
+The draft-plan endpoint, shared plan contract, Gemini adapter, cancellation,
+manual draft-copy/save flow, memory demo, and evaluation exercises come from
+Module 7. Read them as retained features to verify, not newly added Module 8 work.
+MILESTONE_2_EVIDENCE.txt remains an earlier-stage reference; use lesson 8.15 and
+the current Canvas specification for the final Milestone 3 submission.
+
+RUN AND DEPLOY
+Default database: cs418_module8. Cookie: cs418.m8.sid. No data migration.
+Keep server/, client/, and shared/ together. Use AUTH_SETUP.md for Gmail and
+GEMINI_SETUP.md for mock/live planning. Live mode reads GEMINI_API_KEY and
+GEMINI_MODEL from server settings and uses Node fetch without a provider SDK.
+The memory demo and automated provider exercises are local fixtures. Record
+actual Gmail, MongoDB, CAPTCHA, Gemini, and hosted-browser results separately.

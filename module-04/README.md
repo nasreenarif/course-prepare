@@ -50,7 +50,7 @@ The Vite proxy forwards relative `/api` calls to Express on port 3000. Run only 
 | `server/app.js` and `server/auth.js` | Middleware, email verification, pending OTP login, session checks, CSRF, and owner-scoped CRUD. |
 | `server/models.js and server/passwords.js` | Account/task schemas and salted password hashing. |
 | `client/src/api.js` | Same-origin requests and CSRF token handling. |
-| `client/src/main.jsx` | Controlled account forms, session restoration, and task state updates. |
+| `client/src/AuthPanel.jsx` and `client/src/main.jsx` | Account/OTP forms, session restoration, and task state updates. |
 | `practice/` | Pure array updates, priority rules, password/permission demonstrations. |
 
 ## Checks
@@ -63,7 +63,7 @@ npm run build --prefix client
 node --test practice/practice.test.mjs
 ```
 
-Run the separate continuity exercises from the module folder:
+From `module-04/task-app`, move to the sibling continuity-labs folder and run:
 
 ```powershell
 cd ../continuity-labs
@@ -76,7 +76,7 @@ The app includes Gmail verification links and email-based two-step login. Passwo
 
 ## Boundaries and next steps
 
-Tests use controlled doubles/fixtures; complete the live database and two-account checks above separately. They do not prove public hosting, external providers, or a complete accessibility/security audit. The app includes Gmail verification links and email-based two-step login. Password recovery and authenticator/passkey enrollment are separate extensions. The continuity exercises remain isolated concept models; the integrated workflow is in `task-app/server/auth.js` and `identity.js`.
+Tests use controlled doubles/fixtures; complete the live database and two-account checks above separately. They do not prove public hosting, external providers, or a complete accessibility/security audit.
 
 Read [task-app/README.txt](task-app/README.txt) for additional setup guidance, manual checks, limitations, and deployment/practice exercises. Use the numbered lessons in Canvas for the corresponding explanations, assignment requirements, and grading criteria.
 
