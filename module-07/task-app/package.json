@@ -1,0 +1,13 @@
+{
+  "name": "module-7-verification",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test:practice": "node --test practice/booking.test.mjs practice/conversation.test.mjs practice/budget.test.mjs",
+    "evaluate:mock": "node practice/evaluate-mock.mjs",
+    "lab:provider": "node practice/provider-lab.mjs",
+    "lab:budget": "node practice/budget-demo.mjs",
+    "lab:evaluation": "node practice/evaluation-worked.mjs"
+  }
+}

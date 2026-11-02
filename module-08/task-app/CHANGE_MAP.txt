@@ -1,0 +1,17 @@
+MODULE 8 CHANGE MAP
+Module 6 is preserved unchanged. This folder contains a separate continuation.
+Added: protected draft-plan endpoint, pure shared contract, mock/live provider
+adapter, visible mode state, cancellation/stale-result handling, explicit copy to
+manual form, disposable local memory demo, bounded-history exercise, evaluation
+cases, and AI-use/evaluation templates.
+Retained: authentication, sessions, CSRF, owner-scoped CRUD, validation, loading,
+accessible dialog, responsive styles, security headers, CAPTCHA and prior labs.
+No new dependencies were required. shared/ must be included when deploying.
+Default database: cs418_module8. Cookie: cs418.m8.sid. No data migration.
+
+GEMINI PLANNING CONNECTION
+Use GEMINI_API_KEY and GEMINI_MODEL in server/.env for AI_MODE=live.
+server/ai.js sends Gemini generateContent requests and validates candidates.
+GEMINI_SETUP.md explains setup, an optional live smoke check, and error handling.
+The memory demo and automated provider exercises remain local fixtures.
+No additional runtime dependency is required; the adapter uses Node fetch.

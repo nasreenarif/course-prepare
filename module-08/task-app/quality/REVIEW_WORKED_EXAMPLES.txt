@@ -1,0 +1,31 @@
+WORKED EXAMPLES -- use these fictional scenarios to structure your own observations
+
+BUG RECORD EXAMPLE
+Symptom: selecting open tasks displays the completed task.
+Expected: only completed=false records remain.
+Input: [{title:'A',completed:false},{title:'B',completed:true}], status='open'.
+Hypothesis 1: bad stored booleans. Refuted by inspecting the two input objects.
+Hypothesis 2: truthiness treats 'open' as true. Supported by the old predicate.
+Correction: explicit allowed-status comparison; preserve nonmutation behavior.
+Regression: open -> A, done -> B, all -> both, invalid status -> RangeError.
+This example is reproducible with lab:debug; it is not your personal bug history.
+
+READINESS EXAMPLE
+Local tests: PASS in a named local fixture environment.
+Real database restart: NOT RUN, because only the memory demo was used.
+Hosted login: FAIL, because the session cookie is not retained on the tested URL.
+Next action: inspect actual cookie flags, HTTPS and proxy path; do not disable
+cookie protections merely to obtain a passing screenshot.
+After a fix, rerun hosted login and record the new revision and observation.
+
+ACCESSIBILITY OBSERVATION EXAMPLE
+Action: activate Stop waiting using the keyboard.
+Expected: cancelled status; focus returns to Project goal; late draft not shown.
+Evidence: keyboard observation plus browser assertion of the active element.
+Scope: does not establish a full screen-reader experience or conformance.
+
+VIDEO EXPLANATION OUTLINE
+Explain: which input enters, which validation runs, which side effect occurs,
+which failure is returned, and which test establishes the claimed behavior.
+Try the corrected filter, then apply the structure to your own feature.
+Write your own narration and results rather than submitting this outline as a report.

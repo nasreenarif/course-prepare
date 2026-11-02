@@ -1,0 +1,15 @@
+# Dependency installs and generated output, at every module depth
+**/node_modules/
+**/dist/
+**/coverage/
+**/.vite/
+# Keep only safe environment templates
+**/.env
+**/.env.*
+!**/.env.example
+*.log
+*.zip
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

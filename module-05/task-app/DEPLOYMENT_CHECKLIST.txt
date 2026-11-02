@@ -1,0 +1,36 @@
+MODULE 5 DEPLOYMENT CHECKLIST
+
+BEFORE HOSTING
+[ ] Confirm the course-approved account, service, plan, and repository visibility.
+[ ] Review source changes; no .env, secrets, tokens, or real user records committed.
+[ ] Run server tests, client tests, and frontend build with the selected runtime.
+[ ] Complete the built-client rehearsal with real practice MongoDB.
+[ ] Record the commit/release intended for deployment.
+
+CONFIGURATION
+[ ] Service root contains server and client; build and start commands match README.
+[ ] Runtime is supported and meets package engines; dependencies use lockfiles.
+[ ] NODE_ENV=production and SERVE_CLIENT=true.
+[ ] MONGODB_URI and generated SESSION_SECRET are protected runtime variables.
+[ ] Database user and network access match the host's actual outbound addresses.
+[ ] Hosting PORT is used; process listens on 0.0.0.0 in production.
+[ ] HTTPS and the exact trusted-proxy policy are verified, not guessed.
+[ ] /api/health returns a bounded readiness result without creating a session.
+
+PUBLIC HTTPS SMOKE TEST
+[ ] Home page and built assets load; unknown /api path returns JSON 404.
+[ ] Registration, login, /me restoration, and logout work with secure cookies.
+[ ] A task survives reload; valid updates and deletes behave correctly.
+[ ] Invalid fields give useful messages and do not change data.
+[ ] Independent account B cannot read, modify, or delete account A's task.
+[ ] Empty, loading, failure, and read-retry states are understandable.
+[ ] Keyboard navigation, narrow layout, and enlarged text are usable.
+[ ] No secrets appear in browser responses, assets, or shared evidence.
+
+OPERATIONS
+[ ] Record deployed commit, public URL, runtime, and observed results.
+[ ] Identify rollback procedure and database compatibility assumptions.
+[ ] Establish appropriate backups and access to protected diagnostics.
+[ ] Document untested conditions and remaining production limitations.
+
+Complete these checks in your own environment and record the results. Leave untested items unchecked.

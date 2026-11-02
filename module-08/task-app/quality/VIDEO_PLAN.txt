@@ -1,0 +1,13 @@
+YOUR RECORDED WALKTHROUGH PLAN -- follow Canvas duration/format instructions
+State project purpose and identify the demonstrated revision/environment.
+Show a normal user workflow, persisted result and meaningful failure recovery.
+Show the approved AI feature and identify whether the displayed mode is live.
+Trace one UI action through client request, route, authorization, data access and response.
+Explain one important validation/security/accessibility decision and its test.
+Show relevant test results and explain what fixtures do not verify.
+Explain a generated contribution, your changes and AI-use documentation if required.
+State known limitations accurately. Summarize where required artifacts are submitted.
+Use fictional data. Close secret settings and unrelated tabs before recording.
+Rewatch the exported file: readable code, audible explanation, working playback.
+Verify intended reviewer access and complete the actual Canvas submission.
+Do not fill this template with invented test results or a generated first-person report.

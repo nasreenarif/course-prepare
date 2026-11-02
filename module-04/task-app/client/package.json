@@ -1,0 +1,7 @@
+{
+  "name": "module-4-task-client", "private": true, "type": "module",
+  "engines": {"node": ">=22.12"},
+  "scripts": {"dev": "vite --host localhost", "build": "vite build"},
+  "dependencies": {"react": "^19.1.0", "react-dom": "^19.1.0"},
+  "devDependencies": {"vite": "^7.1.0"}
+}

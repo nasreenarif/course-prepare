@@ -1,0 +1,14 @@
+MODULE 7 / MILESTONE 3 DEVELOPMENT EVIDENCE
+Current Canvas requirement:
+Project feature and user outcome:
+Relevant source and request path:
+Mock/local verification and actual results:
+Live verification and actual results (or explicitly not run):
+Authentication, CSRF, input/output and resource-limit checks:
+Accessibility and manual-fallback checks:
+AI-use log reference and modifications I made:
+Evaluation cases and limitations:
+Commit/version:
+Remaining work for Module 8:
+
+Follow Canvas for final rubric, deadlines, video format and submission links.

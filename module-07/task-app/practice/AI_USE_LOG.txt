@@ -1,0 +1,17 @@
+AI-USE LOG -- fill with actual work under Canvas rules
+Interaction ID/date:
+Tool and model/version if known:
+Purpose and requirement:
+Sanitized context supplied (do not include secrets/private data):
+Prompt or concise prompt summary:
+Generated suggestion/artifact:
+Accepted parts:
+Rejected parts and reason:
+My modifications and explanation:
+Verification command/steps and actual result:
+Project commit/version and relevant files:
+Remaining limitations:
+Disclosure required by the current assignment:
+
+Repeat for meaningful interactions. Complete this template with your own observations before submitting it.
+Do not claim this teaching companion or its tests as your own project evidence.

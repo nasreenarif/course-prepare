@@ -1,0 +1,39 @@
+:root { font-family:system-ui,sans-serif; line-height:1.6; color:#202b33; background:#fff; }
+* { box-sizing:border-box; }
+body { margin:0; }
+main,.site-header { width:min(100%,64rem); margin-inline:auto; padding:clamp(1rem,3vw,2rem); }
+.site-header { padding-block:.5rem; border-bottom:1px solid #677786; }
+h1 { font-size:clamp(1.8rem,4vw,2.5rem); line-height:1.2; }
+p,li,h1,h2 { overflow-wrap:anywhere; }
+label { display:block; font-weight:600; margin-top:.7rem; }
+input,button { font:inherit; padding:.6rem .8rem; max-width:100%; min-height:44px; }
+input { width:100%; border:1px solid #677786; background:#fff; color:#202b33; }
+button { min-width:44px; margin:.4rem .25rem .4rem 0; cursor:pointer; border:2px solid #174ca1; background:#fff; color:#174ca1; border-radius:.3rem; }
+button:disabled,button[aria-disabled="true"] { cursor:wait; border-color:#677786; color:#4b5563; }
+fieldset { min-width:0; margin:1rem 0; border:1px solid #677786; padding:1rem; }
+legend { font-weight:700; }
+.task-list { list-style:none; padding:0; display:grid; grid-template-columns:minmax(0,1fr); gap:1rem; }
+.task-card { min-width:0; border:1px solid #677786; border-radius:.5rem; padding:1rem; }
+.task-card span { display:block; margin-bottom:.5rem; }
+@media (min-width:48rem) { .task-list { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+.actions { display:flex; flex-wrap:wrap; gap:.5rem; }
+.error { color:#9b1c20; font-weight:600; }
+[aria-invalid="true"] { border:2px solid #9b1c20; }
+:focus-visible { outline:3px solid #174ca1; outline-offset:3px; }
+.skip-link { position:absolute; left:1rem; top:-10rem; padding:.7rem; background:#fff; color:#174ca1; z-index:10; }
+.skip-link:focus { top:1rem; }
+dialog { width:min(32rem,calc(100% - 2rem)); max-height:calc(100% - 2rem); overflow:auto; color:#202b33; background:#fff; border:2px solid #677786; padding:1.5rem; }
+dialog::backdrop { background:rgb(0 0 0 / .55); }
+@media (prefers-reduced-motion:no-preference) { button { transition:background-color .15s; } }
+@media (forced-colors:active) { button,input,dialog,.task-card { border-color:CanvasText; } :focus-visible { outline-color:Highlight; } }
+
+.lab-section { margin-block:2rem; border-top:1px solid #677786; padding-top:1rem; }
+.table-scroll { max-width:100%; overflow-x:auto; }
+.lab-table { border-collapse:collapse; min-width:38rem; width:100%; }
+.lab-table th,.lab-table td { border:1px solid #677786; padding:.7rem; text-align:left; }
+.lab-image { max-width:100%; height:auto; }
+.error-summary { border:2px solid #9b1c20; padding:1rem; }
+
+figure { margin-inline:0; }
+
+textarea { width:100%; max-width:100%; font:inherit; padding:.6rem; border:1px solid #677786; color:#202b33; background:#fff; resize:vertical; }

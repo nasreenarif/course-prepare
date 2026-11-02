@@ -1,0 +1,15 @@
+LIVE AI EVALUATION LOG -- optional until approved live setup exists
+Case ID and fictional/permitted goal:
+Project commit, prompt version, provider and exact model ID:
+Date and relevant settings:
+Observed response (store only what you are permitted to retain):
+Contract accepted/rejected and reason:
+Relevance and actionability: useful / partly useful / unusable, with explanation:
+Unsupported claims or unsafe/unwanted content:
+Human edits needed before use:
+Latency and usage/cost evidence if available (do not invent missing values):
+Failure/recovery behavior:
+Decision and next focused change:
+
+Mock output tests are NOT live quality results. Run repeated live samples only
+within an approved resource budget. Keep prompts, outputs and logs free of secrets.

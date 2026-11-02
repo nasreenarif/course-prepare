@@ -1,0 +1,18 @@
+YOUR FINAL EVIDENCE -- fill from actual observations
+Canvas requirement / implementation file / check / result / evidence location:
+Use PASS, FAIL, or NOT RUN. Include commit, environment and date.
+Account registration and login:
+Owner-scoped create/read/update/delete and cross-account denial:
+Input validation and error recovery:
+Database persistence after normal server restart:
+AI success, failure, resource limits and manual fallback:
+Actual approved provider integration (separate from mock tests):
+Keyboard, focus, labels, errors, zoom and responsive layout:
+Security boundaries, configuration and dependency review:
+Hosted startup, public URL, health, cookies and asset requests:
+README reproduced from a fresh folder:
+AI-use record links and your own implementation explanation:
+Known issues, consequences and next steps:
+Final repository revision and authorized reviewer access:
+Video location, playback/access check and submission receipt:
+This template does not define the Canvas rubric or certify readiness.

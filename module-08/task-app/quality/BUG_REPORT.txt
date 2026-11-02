@@ -1,0 +1,11 @@
+YOUR BUG REPORT -- blank template
+Requirement and expected behavior:
+Commit, runtime, browser, mode and environment:
+Minimal fictional input and exact reproduction steps:
+Observed result (include sanitized status/code, not secrets):
+Hypothesis A and evidence that would refute it:
+Hypothesis B and evidence that would refute it:
+Root cause and changed lines:
+Regression test and why it failed before the fix:
+After result and nearby behaviors rechecked:
+Remaining limitations:

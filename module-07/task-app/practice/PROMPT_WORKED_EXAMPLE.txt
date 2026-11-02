@@ -1,0 +1,42 @@
+WORKED PROMPT-REVIEW-REFINEMENT SEQUENCE
+Use this fictional scenario to practice reviewing and refining a prompt.
+Apply the workflow to your permitted project work and record your own results.
+
+P0 -- Too vague
+"Add AI to my app."
+Missing: user outcome, stack, contracts, data boundary, side effects, tests.
+Do not accept a large implementation merely because this prompt produced one.
+
+P1 -- Bounded prototype request
+Context: React uses api(path, options); Express has sessions, CSRF and task CRUD.
+Requirement: signed-in users enter a 1-1000 character goal and receive a draft.
+Constraints: accept only goal, no automatic writes, no browser key, no new packages.
+First slice: a fixed mock response, clearly labeled; preserve keyboard navigation.
+Deliver: a small diff, assumptions, and tests for invalid/guest/duplicate requests.
+
+REVIEW -- Hypothetical flawed proposal
+The proposal uses if (!body.goal), then returns body.goal.trim().
+It also accepts a browser-provided model setting and stores every generated task.
+Counterexample: { goal: 42 } passes truthiness but .trim() fails.
+Boundary defect: browser settings bypass server resource policy.
+Side-effect defect: generation now saves data without the required user review.
+
+P2 -- Focused correction request
+"Keep the current route and UI. Require goal to be a string, reject extra fields,
+trim only after validation, and enforce the original length limit. Keep model
+selection server-owned. Remove generation writes; use the existing manual task
+form. Add tests showing zero provider calls for invalid input and no task records
+after generation. Do not rewrite authentication or change the error contract."
+
+ACCEPTANCE -- Inspect rather than trust
+Read server/ai.js goalInput and the protected route in server/app.js.
+Explain why null, arrays, numbers, whitespace, extra fields and 1001 chars fail.
+Run npm run check from task-app and inspect the actual result.
+Use the demo: generate -> no task; Use draft -> no task; Add task -> one task.
+Record your own accepted/rejected changes and observed evidence in AI_USE_LOG.txt.
+
+P3 -- Review usability
+"After cancellation, return focus to Project goal. Editing a goal must clear its
+old plan so an earlier suggestion cannot appear to answer the new text. Preserve
+the rule that canceling the local wait does not guarantee cancellation of billing."
+Verify focus and stale-output behavior with the real browser, not only a screenshot.

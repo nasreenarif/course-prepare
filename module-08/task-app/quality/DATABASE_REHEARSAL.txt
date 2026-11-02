@@ -1,0 +1,18 @@
+REAL DATABASE REHEARSAL -- procedure, not prefilled results
+Prerequisites: normal server configured for your explicitly chosen disposable MongoDB
+database, generated session secret, and fictional data. Do not use demo.js for this.
+1. Record the revision and the database's safe alias; never copy the credential URI.
+2. Start the normal server and Vite as documented. Register practice users A and B with controlled inboxes, click each verification link, then complete password-plus-OTP login. Configure Gmail first using AUTH_SETUP.md.
+3. As A, create one uniquely named task. Record its returned id and title.
+4. As B, verify A's task is absent; attempt read/update through the actual API using
+   B's session and current CSRF token. Expect denial and no private task contents.
+5. As A, confirm the title is unchanged after B's attempt.
+6. Stop only your local normal server, restart it, sign in again if needed, and read
+   A's task. Expect the same id/title. Restarting demo.js would intentionally lose it.
+7. Attempt duplicate registration of A's normalized email. Confirm the actual
+   database uniqueness behavior; model doubles do not establish real index state.
+8. Delete only the fictional records you created through owner-authorized actions.
+Record expected/actual results and safe evidence locations after each step.
+If connection/startup fails, check service availability, permitted network access,
+database user privileges and config names privately. Do not weaken authorization
+or point the exercise at a shared database to bypass the failure.

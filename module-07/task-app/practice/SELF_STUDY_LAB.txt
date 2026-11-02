@@ -1,0 +1,22 @@
+MODULE 6 SELF-STUDY LAB
+From task-app/client, run npm ci --include=dev, then npm run dev.
+Open http://localhost:5173/lab.html. Do not double-click lab.html: it imports JSX
+that Vite must transform. MongoDB, Express, and Google are not needed for this lab.
+The real account app remains at http://localhost:5173/ and needs its backend.
+
+1. Submit blank fields; expect two corrections and focus on the error summary.
+2. Choose Owner name correction; expect focus on its input. Enter both values.
+3. Submit; expect a local success message. Refresh; values are intentionally lost.
+4. Inspect the two input IDs and each label/described-by relationship: unique IDs.
+5. Compare #174ca1/white (~8.12:1) and #777777/white (~4.48:1).
+6. At 320 CSS px, focus and horizontally scroll the table without widening the page.
+7. Inspect the informative image alternative and the visible progress text.
+8. Try HTTPS, HTTP, relative and javascript: URL strings. No URL is visited.
+
+Files: client/src/StudyLab.jsx, TextField.jsx, study-tools.js, style.css;
+client/public/study-progress.svg. These are optional practice components.
+They do not change the Task App's schema or add a contact/project API.
+From client, npm test runs helper and API tests; npm run build builds both pages.
+Serve built pages through Express (README) or a static server, not file://.
+The included .vtt is an illustrative caption file, not captions for a supplied
+video. Replace text/timestamps to match your own recording before using it.

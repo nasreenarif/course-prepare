@@ -1,0 +1,17 @@
+SECURITY EVIDENCE -- record your own results
+Project/commit and environment:
+Asset and trust boundary:
+Control and source file:
+Positive test:
+Negative test:
+Expected HTTP response and storage effect:
+Actual response and storage effect:
+Evidence reference without secrets:
+Remaining limitation:
+
+Review: ownership; request field allowlists; XSS-safe text; dynamic URL policy;
+CSRF and session rotation; cookie attributes; logout; framing/document CSP;
+rate limiting and proxy topology; provider verification and outage handling;
+secret configuration; dependency advisories; logging and recovery.
+Label each item: implemented/tested, implemented/unverified, or out of scope.
+Test only your authorized practice system using fictional data.

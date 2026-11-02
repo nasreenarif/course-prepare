@@ -1,0 +1,18 @@
+ACCESSIBILITY AND RESPONSIVE EVIDENCE -- record your own results
+Project/commit:
+Browser/version, operating system, viewport, zoom:
+Assistive technology/version (or explicitly not tested):
+Journey and state:
+Steps to reproduce:
+Expected behavior:
+Actual behavior:
+Impact on completing the task:
+Source file and correction:
+Retest result/date:
+Remaining limitation:
+
+Suggested journeys: account form; invalid field correction; task creation;
+dialog open/Tab/Shift+Tab/Escape; failed and successful deletion; expired session;
+long content at 320/375/768/1280 CSS pixels; actual 200% text and 400% browser
+zoom; forced colors; reduced motion; live CAPTCHA and assistance route.
+Automated scores alone do not establish accessibility conformance.

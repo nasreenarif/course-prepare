@@ -1,0 +1,25 @@
+{
+  "name": "module-8-verification",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test:practice": "node --test practice/booking.test.mjs practice/conversation.test.mjs practice/budget.test.mjs",
+    "evaluate:mock": "node practice/evaluate-mock.mjs",
+    "lab:provider": "node practice/provider-lab.mjs",
+    "lab:budget": "node practice/budget-demo.mjs",
+    "lab:evaluation": "node practice/evaluation-worked.mjs",
+    "lint": "eslint quality --max-warnings 0",
+    "test:quality": "node --test quality/quality.test.mjs quality/async-example.test.mjs",
+    "lab:debug": "node quality/debug-lab.mjs",
+    "lab:release": "node quality/release-demo.mjs",
+    "lab:lint": "node quality/lint-lab.mjs",
+    "lab:api": "npm --prefix server run lab:api"
+  },
+  "devDependencies": {
+    "eslint": "10.13.0"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  }
+}

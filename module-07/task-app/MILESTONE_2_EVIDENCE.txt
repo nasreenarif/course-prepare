@@ -1,0 +1,17 @@
+MILESTONE 2 PREPARATION -- use the Canvas specification and rubric
+Project and commit/version:
+Canvas requirement (copy accurately):
+Implemented behavior:
+Relevant source file/route:
+Verification environment and steps:
+Observed result and remaining limitations:
+Video segment or other evidence:
+Repository link and confirmation that I can access it:
+Deployment link if required and access check:
+Recorded video link/file and playback check:
+Report/documentation required by Canvas:
+Allowed assistance and disclosure under course rules:
+
+Repeat the requirement block for each actual rubric item. Confirm deadline,
+video duration/format, submission location and permissions in Canvas.
+Do not insert credentials, raw cookies, CAPTCHA tokens or private keys.

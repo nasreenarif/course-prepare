@@ -1,0 +1,20 @@
+MODULE 6 DEPLOYMENT REVIEW -- fill in actual results
+Use the course-approved hosting arrangement and your own practice data.
+[ ] Locked installs, tests, and production build pass.
+[ ] Server-only secrets configured; no .env or credentials committed.
+[ ] NODE_ENV=production and SERVE_CLIENT=true.
+[ ] Database access, indexes, session persistence and backups reviewed.
+[ ] Proxy trust matches every actual request path.
+[ ] Public HTTPS account and task flow works; secure cookie is set correctly.
+[ ] CAPTCHA_ENABLED=true with a compatible v2 key, secret, and exact hosts.
+[ ] Public /api/config exposes no secret; real registration token verified.
+[ ] Missing, expired/reused and wrong-host tokens fail without account creation.
+[ ] Document CSP and anti-framing headers verified, including errors.
+[ ] Legitimate CAPTCHA scripts/frames work under CSP.
+[ ] Keyboard, screen reader, zoom, narrow layout and challenge assistance tested.
+[ ] Cross-account access, CSRF rejection, logout, and expiry verified.
+[ ] Rate-limit storage/topology and provider availability reviewed.
+[ ] Logs omit credentials, session cookies and verification tokens.
+[ ] Health /api/health, restart, rollback and data recovery rehearsed.
+[ ] Milestone links and recording permissions verified in Canvas.
+Record environment, date, evidence and unresolved issues beside each result.

@@ -1,0 +1,4 @@
+.event-card { max-width: 36rem; padding: 1rem; border: 1px solid #555; border-radius: .5rem; }
+.event-card__title { margin-top: 0; }
+a:focus-visible, button:focus-visible { outline: 3px solid #0759a0; outline-offset: 3px; }
+img { max-width: 100%; height: auto; }

@@ -1,0 +1,24 @@
+# Optional template: copy to .github/workflows/verify.yml in your own repository.
+# Assumes server/ and client/ are at the repository root. Does not deploy.
+name: Verify course project
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: |
+            server/package-lock.json
+            client/package-lock.json
+      - run: npm ci --prefix server
+      - run: npm ci --prefix client --include=dev
+      - run: npm run check

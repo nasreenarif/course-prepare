@@ -1,0 +1,31 @@
+MODULE 8 QUALITY LABS -- start in task-app
+Install root tooling with npm ci --include=dev (also install server/client per README).
+1. npm run lab:debug
+   Before: Read requirement (wrong for open). After: Write test (correct).
+   Explain why a nonempty string makes the deliberately broken predicate fail.
+2. npm run test:quality
+   Nine tests, including three async examples: status partitions, immutability, invalid data, evidence and blockers.
+   In a disposable copy, replace === with !== in the filter. The relevant tests
+   should fail; restore the expression. Do not submit intentionally broken code.
+3. npm run lint
+   No diagnostics means the configured quality/ scope passed, not the whole app.
+   Try an unused variable in a disposable copy, observe no-unused-vars, remove it.
+4. npm run lab:release
+   ready is false; hosted-login is a blocker. This is fictional teaching input.
+5. npm run check
+   Runs scoped lint, quality tests, inherited server/client/practice tests and build.
+6. npm run lab:provider; npm run evaluate:mock
+   Local provider fixtures only. No account, network or paid call.
+Use FINAL_EVIDENCE.txt for your own manual/database/hosted/live observations.
+
+ADDITIONAL PRACTICE
+npm run lab:api
+  One complete HTTP trace test passes: CSRF rotation, rejected writes leave no
+  record, malformed JSON has a matching request reference, valid write is read back.
+  Uses controlled models and temporary loopback HTTP; no MongoDB/API key needed.
+npm run lab:lint
+  Three expected diagnostic cases exit 1; the corrected snippet exits 0.
+  The lab itself succeeds only when all four outcomes match. No source is changed.
+Async examples in test:quality cover success, malformed data and dependency rejection.
+Read DATABASE_REHEARSAL.txt for separate real-database steps, and
+REVIEW_WORKED_EXAMPLES.txt for explicitly fictional report structures.

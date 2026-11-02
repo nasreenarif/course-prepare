@@ -1,0 +1,18 @@
+MODULE 7 DEPLOYMENT CHECKLIST -- record actual evidence
+[ ] Normal server entry point, not demo.js.
+[ ] server/, client/, shared/ and lockfiles present; clean installs/build pass.
+[ ] MongoDB, session store, indexes and backup/recovery plan verified.
+[ ] HTTPS, secure cookie behavior and trusted proxy topology verified.
+[ ] CAPTCHA production configuration and real challenge verified (Module 6).
+[ ] AI_MODE=live or off; no mock represented as live integration.
+[ ] GEMINI_API_KEY only in server secret settings; GEMINI_MODEL available to this project.
+[ ] Gemini setup and quota reviewed; live smoke check and signed-in request recorded.
+[ ] Small fictional live request verified; model access/latency/usage reviewed.
+[ ] Auth/CSRF/input failures occur before external work; quotas/concurrency tested.
+[ ] No AI generation or draft-copy operation creates a task automatically.
+[ ] Text rendering, keyboard flow, cancellation and manual fallback checked.
+[ ] Public document headers and provider widget behavior still work.
+[ ] Logs omit keys, raw cookies, prompts and outputs unless deliberately authorized.
+[ ] Multi-instance quota/spending needs evaluated; local limits are not global.
+[ ] AI-use log, evaluation notes and project README reflect actual results.
+[ ] Canvas requirements reviewed and submitted links accessible to me.

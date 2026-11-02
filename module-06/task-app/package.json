@@ -1,0 +1,9 @@
+{
+  "name": "module-6-verification",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check.mjs",
+    "test:practice": "node --test practice/booking.test.mjs"
+  }
+}

@@ -1,0 +1,27 @@
+MODULE 7 PRACTICE LABS -- start in task-app after installing dependencies
+No API key, database, or paid call is needed for these command-line exercises.
+
+npm run lab:provider
+Thirteen injected Gemini responses traverse the real provider adapter. Predict each public
+result before reading the output. All observed codes must match expected codes.
+"live" here selects adapter code but injected fetch prevents network access.
+Do not remove fetchImpl when experimenting with this fixture runner.
+
+npm run lab:budget
+Expected: 0.0040 per request, 0.40 for 100 at deliberately hypothetical rates.
+Change counts/rates and recompute by hand. This is not a quote or an enforced cap.
+The simple formula omits provider-specific cached tokens, reasoning accounting,
+tools, discounts, taxes and retries; use actual applicable accounting for live use.
+
+npm run lab:evaluation
+Both example plans pass the contract. Compare their usefulness.
+Schema success is not semantic success; the written reviews explain the difference.
+
+Read PROMPT_WORKED_EXAMPLE.txt for a complete prompt/review/refinement exercise.
+Use AI_USE_LOG.txt for your own evidence; do not copy the fictional scenario as
+if it happened in your project. Existing evaluate:mock remains a fixture check.
+
+Browser follow-up: use the demo in README. Generate a plan, then edit the goal:
+the old plan should disappear. Start a slow request in the browser test fixture
+and Stop waiting: focus should return to Project goal, and no late plan appears.
+If you use a controlled browser fixture, record its simulated conditions separately from live-provider results.

@@ -1,0 +1,9 @@
+body { font: 1rem/1.6 system-ui, sans-serif; color: #202b33; background: #fff; margin: 0; }
+main { max-width: 50rem; margin: auto; padding: 1.5rem; }
+label { display: block; font-weight: 600; margin-top: .7rem; }
+input, button { font: inherit; padding: .5rem; max-width: 100%; box-sizing: border-box; }
+input { width: 100%; }
+button { margin: .5rem 0; cursor: pointer; }
+fieldset { margin: 1rem 0; border: 1px solid #677786; }
+li { margin: 1rem 0; overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid #174ca1; outline-offset: 3px; }

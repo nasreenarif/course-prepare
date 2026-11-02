@@ -1,0 +1,28 @@
+MODULE 4 TO MODULE 5 CHANGE MAP
+
+KEEP: models, salted password helper, session regeneration, CSRF token flow,
+server-derived ownership, public user/task projections, and owner-scoped CRUD.
+
+ADD: server/validation.js and errors.js. app.js imports these instead of defining
+the old task validator and inline error handler. Existing routes call taskInput.
+Add server-generated X-Request-Id and the standard error/code/fields/requestId
+response shape. Retain API JSON failures before the optional React fallback.
+
+CHANGE: server.js validates configuration, optionally serves built client assets,
+binds to the hosting interface in production, supplies a readiness ping, and
+handles shutdown signals. dev loads .env; start expects a supplied environment.
+
+CHANGE: api.js classifies HTTP, format, network, timeout, and cancellation errors.
+It still uses the same-origin cookie and CSRF approach. It does not replay writes.
+
+ADD: TaskForm.jsx and client validation.js for controlled input and field feedback.
+Add ErrorBoundary.jsx for render failures. main.jsx coordinates explicit load
+states, read retries, private-data clearing, and guarded task operations.
+
+ADAPTATION ORDER
+1. Compare your existing API fields and response shapes with this reference.
+2. Preserve authentication and ownership while moving validation/errors.
+3. Update the fetch helper and caller handling together.
+4. Add controlled form feedback and loading states; verify every branch.
+5. Run the retained non-owner tests before preparing deployment.
+6. Rehearse the built client locally, then configure hosting deliberately.

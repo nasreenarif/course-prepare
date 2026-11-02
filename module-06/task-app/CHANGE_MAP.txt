@@ -1,0 +1,10 @@
+MODULE 6 CHANGE MAP
+Module 5 remains unchanged. This is a separate complete companion.
+Retained: authentication, CSRF, ownership, validation, error handling, loading,
+response contracts, deployment path, and booking/CI practice examples.
+Added: semantic navigation, responsive grid, native deletion dialog and focus,
+security response headers, public configuration, optional local v2 CAPTCHA,
+production-required CAPTCHA configuration, verifier tests and review templates.
+The cookie is cs418.m6.sid and default database is cs418_module6.
+Inherited module5.test.js and practice files retain their names for continuity.
+The optional CI example is not enabled or run remotely.
